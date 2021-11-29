@@ -1,14 +1,14 @@
+from rest_framework import serializers
 from django.contrib.auth import authenticate, get_user_model
 from django.utils.translation import ugettext_lazy as _
-from rest_framework import serializers
-from apps.core.models import EnCredentials
+from apps.core.models import Credentials
 
 User = get_user_model()
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = EnCredentials
+        model = Credentials
         fields = ('username', 'password')
 
     def create(self, validated_data):

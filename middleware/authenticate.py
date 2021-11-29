@@ -12,9 +12,7 @@ from properties.session_properties import SessionProperties
 
 class Authenticate():
     excluded_apps = [
-        "SignUp",
-        "Login",
-        "Logout"
+        "api"
     ]
 
     def __init__(self, get_response):
@@ -22,6 +20,7 @@ class Authenticate():
 
     def __call__(self, request):
         app_name = AppUtil.getAppName(request)
+        Logger.info("Triggering app : "+app_name);
         if app_name not in self.excluded_apps:
             user_id = request.session[
                 SessionProperties.USER_ID_KEY] if SessionProperties.USER_ID_KEY in request.session else None

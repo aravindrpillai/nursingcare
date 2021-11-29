@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-# Create your views here.
+
+class RegisterStaff(APIView):
+    def post(self, request, *args, **kwargs):
+        data= {
+            'username':'aravind',
+            'age':20
+        }
+        return Response(data)
