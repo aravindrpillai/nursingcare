@@ -21,7 +21,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
-class LoginSerializers(serializers.Serializer, ABC):
+class LoginSerializers(serializers.Serializer):
     username = serializers.CharField(max_length=255)
     password = serializers.CharField(
         label=_("Password"),
