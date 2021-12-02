@@ -1,0 +1,49 @@
+22:45:30,619 django.request ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\nursingcare\middleware\authenticate.py", line 29, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+22:46:09,908 django.utils.autoreload INFO E:\nursingcare\nursingcare\settings.py changed, reloading.
+23:49:44,386 django.request ERROR Internal Server Error: /api/staff/register
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "C:\Python39\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Python39\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/staff/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+23:50:17,71 django.request ERROR Internal Server Error: /api/staff/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 29, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+23:51:01,263 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+23:51:09,287 django.request ERROR Internal Server Error: /api/staff/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 30, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+23:51:29,428 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+23:51:38,115 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+23:51:49,840 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+23:51:59,782 root INFO Triggering app : api
+23:51:59,788 django.security.csrf WARNING Forbidden (CSRF cookie not set.): /api/staff/register/
+23:53:24,774 django.utils.autoreload INFO F:\nursingcare\apps\staff\urls.py changed, reloading.
+23:53:30,885 root INFO Triggering app : api
+23:54:10,85 root INFO Triggering app : 
+23:54:10,553 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined

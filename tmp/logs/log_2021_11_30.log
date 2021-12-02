@@ -1,0 +1,567 @@
+11:04:04,415 django.utils.autoreload INFO F:\nursingcare\apps\staff\urls.py changed, reloading.
+11:04:43,661 root INFO Triggering app : staff
+11:04:43,798 django.request ERROR Internal Server Error: /staff/apis/view/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+11:05:16,219 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:05:23,525 root INFO Triggering app : staff
+11:05:23,536 django.security.csrf WARNING Forbidden (CSRF cookie not set.): /staff/apis/view/
+11:06:46,798 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:06:54,530 root INFO Triggering app : staff
+11:06:54,599 django.request ERROR Internal Server Error: /staff/apis/view/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view apps.staff.new_registration.views.view_all_staff didn't return an HttpResponse object. It returned None instead.
+11:07:13,900 root INFO Triggering app : staff
+11:07:14,314 django.request ERROR Internal Server Error: /staff/apis/view/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Python39\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 13, in view_all_staff
+    return JsonResponse(serialize_obj.data)
+  File "C:\Python39\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "C:\Python39\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Python39\lib\site-packages\rest_framework\serializers.py", line 502, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Python39\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `username` on serializer `NewStaffRegistrationSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'username'.
+11:08:01,692 root INFO Triggering app : admin
+11:08:01,858 django.request ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+11:09:59,662 django.utils.autoreload INFO F:\nursingcare\nursingcare\urls.py changed, reloading.
+11:10:11,455 root INFO Triggering app : admin
+11:10:11,517 django.request ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+11:10:12,764 root INFO Triggering app : admin
+11:10:12,831 django.request ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+11:10:41,965 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:10:45,891 root INFO Triggering app : admin
+11:11:28,652 root INFO Triggering app : admin
+11:11:29,104 root INFO Triggering app : admin
+11:11:47,924 django.utils.autoreload INFO F:\nursingcare\nursingcare\urls.py changed, reloading.
+11:11:51,762 root INFO Triggering app : admin
+11:11:51,897 root INFO Triggering app : admin
+11:11:52,710 root INFO Triggering app : admin
+11:11:52,799 root INFO Triggering app : admin
+11:11:55,172 root INFO Triggering app : admin
+11:11:57,180 root INFO Triggering app : admin
+11:11:57,208 root INFO Triggering app : admin
+11:11:59,355 root INFO Triggering app : admin
+11:12:00,785 root INFO Triggering app : admin
+11:12:20,416 root INFO Triggering app : admin
+11:12:23,407 root INFO Triggering app : admin
+11:12:23,521 root INFO Triggering app : admin
+11:12:27,900 root INFO Triggering app : 
+11:12:27,958 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 28, in __call__
+    Logger.error("Middleware Authentication Denied User ID {} To Access App {} ".format(user_id, appName))
+NameError: name 'appName' is not defined
+11:13:04,577 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:13:10,351 root INFO Triggering app : 
+11:13:10,357 root ERROR Middleware Authentication Denied User ID None To Access App  
+11:13:10,364 root INFO Triggering app : Login
+11:13:10,368 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,373 root INFO Triggering app : Login
+11:13:10,376 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,380 root INFO Triggering app : Login
+11:13:10,383 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,388 root INFO Triggering app : Login
+11:13:10,391 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,395 root INFO Triggering app : Login
+11:13:10,398 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,404 root INFO Triggering app : Login
+11:13:10,408 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,413 root INFO Triggering app : Login
+11:13:10,416 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,423 root INFO Triggering app : Login
+11:13:10,426 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,430 root INFO Triggering app : Login
+11:13:10,433 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,438 root INFO Triggering app : Login
+11:13:10,441 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,445 root INFO Triggering app : Login
+11:13:10,447 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,452 root INFO Triggering app : Login
+11:13:10,455 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,460 root INFO Triggering app : Login
+11:13:10,463 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,467 root INFO Triggering app : Login
+11:13:10,471 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,475 root INFO Triggering app : Login
+11:13:10,478 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,483 root INFO Triggering app : Login
+11:13:10,487 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,491 root INFO Triggering app : Login
+11:13:10,494 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,498 root INFO Triggering app : Login
+11:13:10,501 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:10,506 root INFO Triggering app : Login
+11:13:10,508 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,702 root INFO Triggering app : Login
+11:13:11,723 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,742 root INFO Triggering app : Login
+11:13:11,747 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,755 root INFO Triggering app : Login
+11:13:11,759 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,765 root INFO Triggering app : Login
+11:13:11,770 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,776 root INFO Triggering app : Login
+11:13:11,779 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,786 root INFO Triggering app : Login
+11:13:11,789 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,794 root INFO Triggering app : Login
+11:13:11,799 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,805 root INFO Triggering app : Login
+11:13:11,808 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,815 root INFO Triggering app : Login
+11:13:11,820 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,827 root INFO Triggering app : Login
+11:13:11,830 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,837 root INFO Triggering app : Login
+11:13:11,841 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,847 root INFO Triggering app : Login
+11:13:11,852 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,859 root INFO Triggering app : Login
+11:13:11,863 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,869 root INFO Triggering app : Login
+11:13:11,873 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,880 root INFO Triggering app : Login
+11:13:11,884 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,889 root INFO Triggering app : Login
+11:13:11,892 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,897 root INFO Triggering app : Login
+11:13:11,900 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,906 root INFO Triggering app : Login
+11:13:11,908 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,913 root INFO Triggering app : Login
+11:13:11,916 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:11,921 root INFO Triggering app : Login
+11:13:11,924 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:16,974 root INFO Triggering app : Login
+11:13:16,980 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:16,990 root INFO Triggering app : Login
+11:13:16,995 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,4 root INFO Triggering app : Login
+11:13:17,9 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,16 root INFO Triggering app : Login
+11:13:17,24 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,31 root INFO Triggering app : Login
+11:13:17,36 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,43 root INFO Triggering app : Login
+11:13:17,48 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,56 root INFO Triggering app : Login
+11:13:17,61 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,69 root INFO Triggering app : Login
+11:13:17,74 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,82 root INFO Triggering app : Login
+11:13:17,88 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,96 root INFO Triggering app : Login
+11:13:17,103 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,111 root INFO Triggering app : Login
+11:13:17,115 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,123 root INFO Triggering app : Login
+11:13:17,127 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,135 root INFO Triggering app : Login
+11:13:17,141 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,148 root INFO Triggering app : Login
+11:13:17,155 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,163 root INFO Triggering app : Login
+11:13:17,167 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,173 root INFO Triggering app : Login
+11:13:17,177 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,185 root INFO Triggering app : Login
+11:13:17,190 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,196 root INFO Triggering app : Login
+11:13:17,201 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,210 root INFO Triggering app : Login
+11:13:17,214 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:17,220 root INFO Triggering app : Login
+11:13:17,224 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:43,0 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:13:46,40 root INFO Triggering app : Login
+11:13:46,44 root ERROR Middleware Authentication Denied User ID None To Access App Login 
+11:13:46,127 django.request ERROR Internal Server Error: /Login
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\nursingcare\middleware\authenticate.py", line 30, in __call__
+    raise Exception("Access Denied.")
+Exception: Access Denied.
+11:14:02,178 django.utils.autoreload INFO F:\nursingcare\middleware\authenticate.py changed, reloading.
+11:18:24,747 django.utils.autoreload INFO F:\nursingcare\apps\staff\new_registration\views.py changed, reloading.
+11:19:35,59 root INFO Triggering app : staff
+11:19:35,282 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 29, in _create_new_staff
+    credentials.username = data.username
+AttributeError: 'dict' object has no attribute 'username'
+11:20:51,316 django.utils.autoreload INFO F:\nursingcare\apps\staff\new_registration\views.py changed, reloading.
+11:21:02,355 root INFO Triggering app : staff
+11:21:02,536 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 30, in _create_new_staff
+    credentials.username = data.username
+AttributeError: 'dict' object has no attribute 'username'
+11:21:17,245 django.utils.autoreload INFO F:\nursingcare\apps\staff\new_registration\views.py changed, reloading.
+11:21:25,627 root INFO Triggering app : staff
+11:21:25,693 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 30, in _create_new_staff
+    credentials.username = data.username
+AttributeError: 'dict' object has no attribute 'username'
+11:21:49,753 django.utils.autoreload INFO F:\nursingcare\apps\staff\new_registration\views.py changed, reloading.
+11:22:13,147 root INFO Triggering app : staff
+11:22:13,966 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: en_credentials
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 31, in _create_new_staff
+    credentials.save()
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: en_credentials
+11:25:23,96 django.utils.autoreload INFO F:\nursingcare\nursingcare\settings.py changed, reloading.
+11:28:30,741 root INFO Triggering app : admin
+11:28:39,801 root INFO Triggering app : staff
+11:28:39,923 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: en_credentials
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 35, in _create_new_staff
+    credentials.save()
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: en_credentials
+11:32:19,60 django.utils.autoreload INFO F:\nursingcare\apps\core\models.py changed, reloading.
+11:33:54,489 django.utils.autoreload INFO F:\nursingcare\nursingcare\settings.py changed, reloading.
+11:36:05,707 django.utils.autoreload INFO F:\nursingcare\apps\core\models.py changed, reloading.
+11:37:18,688 django.utils.autoreload INFO F:\nursingcare\nursingcare\settings.py changed, reloading.
+11:37:59,526 django.utils.autoreload INFO F:\nursingcare\nursingcare\settings.py changed, reloading.
+11:38:49,289 django.utils.autoreload INFO F:\nursingcare\apps\core\models.py changed, reloading.
+11:41:44,398 django.utils.autoreload INFO F:\nursingcare\apps\core\apps.py changed, reloading.
+11:55:53,367 root INFO Triggering app : admin
+11:56:18,569 root INFO Triggering app : staff
+11:56:22,226 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: en_credentials
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 35, in _create_new_staff
+    credentials.save()
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: en_credentials
+11:57:48,285 root INFO Triggering app : staff
+11:57:48,479 django.request ERROR Internal Server Error: /staff/apis/register/
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: en_credentials
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 21, in post
+    self._create_new_staff(request_object)
+  File "F:\nursingcare\apps\staff\new_registration\views.py", line 35, in _create_new_staff
+    credentials.save()
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: en_credentials
+11:58:44,545 django.utils.autoreload INFO F:\nursingcare\apps\core\models.py changed, reloading.
