@@ -8,15 +8,10 @@ class Credentials(models.Model):
     last_login_time = models.DateField(null=True)
     failed_login_attempts = models.IntegerField(default=0)
     locked = models.BooleanField(default=False)
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = []
     
     class Meta:
-        db_table = "en_credentials"
-        verbose_name = "en_credentials"
-
-    def __str__(self):
-        return self.username
+        managed = True
+        db_table = "credentials"
 
 
 class Gender(models.Model):
@@ -26,8 +21,8 @@ class Gender(models.Model):
     priority = models.IntegerField(null=False, default=10)
 
     class Meta:
-        db_table = "tl_gender"
-        verbose_name = "tl_gender"
+        managed = True
+        db_table = "gender"
 
 
 class District(models.Model):
@@ -37,8 +32,8 @@ class District(models.Model):
     priority = models.IntegerField(null=False, default=10)
 
     class Meta:
-        db_table = "tl_district"
-        verbose_name = "tl_district"
+        managed = True
+        db_table = "district"
 
 
 class State(models.Model):
@@ -48,8 +43,8 @@ class State(models.Model):
     priority = models.IntegerField(null=False, default=10)
 
     class Meta:
-        db_table = "tl_state"
-        verbose_name = "tl_state"
+        managed = True
+        db_table = "state"
 
 
 class Country(models.Model):
@@ -59,8 +54,8 @@ class Country(models.Model):
     priority = models.IntegerField(null=False, default=10)
 
     class Meta:
-        db_table = "tl_country"
-        verbose_name = "tl_country"
+        managed = True
+        db_table = "country"
 
 
 class Address(models.Model):
@@ -75,5 +70,5 @@ class Address(models.Model):
     is_default_address = models.BooleanField(null=True)
 
     class Meta:
-        db_table = "en_address"
-        verbose_name = "en_address"
+        managed = True
+        db_table = "address"
